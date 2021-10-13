@@ -67,7 +67,7 @@ class ViewController: UIViewController {
             let rsp = try await URLSession.shared.download(from: URL(string: url)!, delegate: nil)
             return UIImage(contentsOfFile: rsp.0.path)
         } catch {
-            return nil
+            return UIImage()
         }
     }
     
